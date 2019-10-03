@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OMBD</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  
+function PostMovie(){
+
+  var movies =  $("#movieId").val().trim();
+  var queryURL = "https://www.omdbapi.com/?t=" + movies + "&apikey=baa17ffd";
+
+$.ajax({
+    url: queryURL,
+    method: "GET"
+}).then(function(response) {
+    console.log(response.Title);
+    console.log(response.Year);
+   $("#title").text(response.Title);
+   $("#year").text(response.Year);
+   $("#rating").text(response.Rated);
+   $("#actors").text(response.Actors);
+
+  var imgURL = response.Poster;
+
+  var image = $("<img>").attr("src", imgURL);
+
+  $("#poster").prepend(image);
+  
+});
+
+}
+
+$(".search").on("click", function(event) {
+        event.preventDefault();
+    
+        // This line grabs the input from the textbox
+        var movie = $("#movieId").val().trim();
+
+        // Adding movie from the textbox to our array
+        movies.push(movie);
+
+        // Calling renderButtons which handles the processing of our movie array
+        renderButtons();
+      });
+
+
+
+$(document).on("click", ".search", PostMovie);
+
+  </script>
+<body>
+    <h1>That one movie with that one actor</h1>
+    <br>
+    <input type="text" id="movieId"> <button class="search">Search</button>
+    <br>
+    <div class="container">
+    <h3 id="title"></h3>
+    <p id="actors"></p>
+    <p id="year"></p>
+    <p id="rating"></p>
+    <p id="poster"></p>
+    </div>
+    
+</body>
+
+</html>
