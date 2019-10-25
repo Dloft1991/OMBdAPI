@@ -2,6 +2,10 @@ h1 {
     text-align: center; 
     background-color: rgb(203, 182, 23);
 }
+h3 {
+    text-align: center; 
+    background-color: rgb(203, 182, 23);
+}
 input {
     text-align: center; 
     padding-left: 40%;
