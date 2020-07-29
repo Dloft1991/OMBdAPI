@@ -1,37 +1,50 @@
+body {
+    background-image: url('images/1fa008e875d79160217eb03b071ca569.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
 h1 {
     text-align: center; 
-    background-color: rgb(203, 182, 23);
+    margin: auto;
+    background-color:white;
 }
 h3 {
+    margin: auto;
     text-align: center; 
-    background-color: rgb(203, 182, 23);
+    background-color: white;
+}
+p {
+    background-color: white;
 }
 input {
+    margin: auto;
     text-align: center; 
     padding-left: 40%;
     padding-right: 40%;
 }
 
 .container {
+    margin-left: -30%;
     padding-left: 40%;
     padding-right: 40%;
-    background-color: rgb(203, 182, 23);
+    width: 300px;
 }
 @media only screen and (max-width: 414px) {
     .container {
         padding-left: 10%;
         padding-right: 10%;
-        background-color: rgb(203, 182, 23);
+        background-color: white;
     }
     input {
         text-align: center; 
         padding-left: 10%;
         padding-right: 10%;
-        background-color: rgb(203, 182, 23);
+        background-color: white;
     }
     button {
         color: blue;
-        background-color: rgb(203, 182, 23); 
+        background-color: white; 
     }
     
   }
