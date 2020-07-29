@@ -34,20 +34,20 @@ input {
     color: goldenrod;
 }
 @media only screen and (max-width: 414px) {
-    .container {
-        padding-left: 10%;
-        padding-right: 10%;
-        background-color: white;
-    }
     input {
+        margin: auto;
         text-align: center; 
-        padding-left: 10%;
-        padding-right: 10%;
-        background-color: white;
+        padding-left: 40%;
+        padding-right: 40%;
     }
-    button {
-        color: blue;
-        background-color: white; 
+    
+    .container {
+        padding-left: 1%;
+        padding-right: 40%;
+        width: 160px;
+        color: goldenrod;
+        background-color: black;
+        text-align: center;
     }
     
   }
