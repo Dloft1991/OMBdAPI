@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OMBD</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
     
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -56,8 +57,11 @@ $(document).on("click", ".search", PostMovie);
 
   </script>
 <body>
-    <h1>IMDB Search</h1>
-    <h3>Movies and Shows</h3>
+  <div class="header" style="background-image: url('images/deal1008ticket.png'); font-family: 'Cinzel', serif;  margin-left: auto; margin-right: auto;">
+    IMDB Search
+    <br>
+    Movies and Shows
+  </div>
     <br>
      <div id="movieName" style="width: 50px;">
         <input type="text" id="movieId" placeholder="Type a movie name"> <button class="search">Search</button>
